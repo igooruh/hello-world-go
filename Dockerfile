@@ -2,7 +2,7 @@ FROM --platform=linux/amd64 golang:1.21.5 AS builder
 
 WORKDIR /app
 
-COPY . .
+COPY main.go /app
 
 RUN CGO_ENABLED=0 GOOS=linux go build -o play main.go
 
